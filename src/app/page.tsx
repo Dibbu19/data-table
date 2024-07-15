@@ -1,8 +1,17 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import React from "react";
+// import PeopleDataTable from "./data-table";
+import { columns } from "./people/columns";
+import { people } from "@/sample-data";
+import PeopleDataTable from "./people/data-table";
 
-export default function Home() {
+type Props = {};
+
+const People = (props: Props) => {
   return (
-     <Button>Hello</Button>
+    <div className="container py-10 mx-auto">
+      <PeopleDataTable columns={columns} data={people}></PeopleDataTable>
+    </div>
   );
-}
+};
+
+export default People;
